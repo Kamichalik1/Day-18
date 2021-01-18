@@ -15,8 +15,8 @@ namespace Part_2
 
             for (int i = 0; i < Tokens.Count; i++)
             {
-                int Token = 0;
-                if (int.TryParse(Tokens[i], out Token))
+                int Operand = 0;
+                if (int.TryParse(Tokens[i], out Operand))
                 {
                     Result.Add(Tokens[i]);
                 }

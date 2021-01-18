@@ -140,7 +140,7 @@ namespace Part_2
 
             }
 
-            Console.WriteLine(Result);
+            Console.WriteLine(Total);
             Console.ReadKey();
 
         }

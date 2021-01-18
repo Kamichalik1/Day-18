@@ -8,7 +8,7 @@ namespace Part_2
 {
     class Program
     {
-        static List<string> RPNGenerator(List<string> Tokens,Dictionary<string,int> Precedences)
+        static List<string> RPNGenerator(List<string> Tokens, Dictionary<string,int> Precedences)
         {
             List<string> Result = new List<string>();
             Stack<string> OperatorStack = new Stack<string>();
@@ -23,14 +23,12 @@ namespace Part_2
                 else
                 {
                     if (Tokens[i] != "(" && Tokens[i] != ")")
-                    {
-                        
+                    {                        
                         while (OperatorStack.Count > 0 && OperatorStack.Peek() != "(" && Precedences[OperatorStack.Peek()] >= Precedences[Tokens[i]])
                         {
                             Result.Add(OperatorStack.Pop());
                         }                        
                         OperatorStack.Push(Tokens[i]);
-
                     }
                     else if (Tokens[i] == "(")
                     {                        
@@ -90,7 +88,7 @@ namespace Part_2
                     }
 
                     Stack.Push(Result);
-
+                    
                 }
             }
 
@@ -101,7 +99,6 @@ namespace Part_2
         {
 
             string[] Lines = System.IO.File.ReadAllLines(@"E:\Advent Code\Day 18\Data.txt");
-
 
             Dictionary<string, int> Precedences = new Dictionary<string, int>();
             Precedences.Add("-", 1);
@@ -127,6 +124,7 @@ namespace Part_2
                         CleanedData += Lines[i][j].ToString();
                     }
                 }
+                
                 CleanedData = CleanedData.Replace("  ", " ");
                 if (CleanedData[0] == ' ')
                 {
@@ -136,7 +134,7 @@ namespace Part_2
                 {
                     CleanedData = CleanedData.Remove(CleanedData.Length-1, 1);
                 }
-
+                
                 List<string> Tokens = new List<string>(CleanedData.Split(" ".ToCharArray()));
                 List<string> RPN = RPNGenerator(Tokens, Precedences);
                 long Result = RPNCalc(RPN);
@@ -144,18 +142,7 @@ namespace Part_2
 
             }
 
-            //repeat
-
-            //grab tokens
-            //pass in tokens
-            //pass in precedences           
-            //generate RPN
-            //Run through calc
-            //add to total
-            
-
-
-            Console.WriteLine("Hello World!");
+            Console.WriteLine(Result);
             Console.ReadKey();
 
         }

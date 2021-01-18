@@ -1,7 +1,0 @@
-E:\Advent Code\Day 18\Day18\Day18\bin\Debug\Day18.exe.config
-E:\Advent Code\Day 18\Day18\Day18\bin\Debug\Day18.exe
-E:\Advent Code\Day 18\Day18\Day18\bin\Debug\Day18.pdb
-E:\Advent Code\Day 18\Day18\Day18\obj\Debug\Day18.csprojAssemblyReference.cache
-E:\Advent Code\Day 18\Day18\Day18\obj\Debug\Day18.csproj.CoreCompileInputs.cache
-E:\Advent Code\Day 18\Day18\Day18\obj\Debug\Day18.exe
-E:\Advent Code\Day 18\Day18\Day18\obj\Debug\Day18.pdb
